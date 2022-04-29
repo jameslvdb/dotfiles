@@ -1,0 +1,6 @@
+[aws]
+disabled = true
+
+[nodejs]
+symbol = '⬢ '
+

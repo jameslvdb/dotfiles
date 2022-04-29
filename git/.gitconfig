@@ -1,0 +1,31 @@
+[user]
+	name = James Vanderburg
+	email = james@vanderburg.org
+[alias]
+	ch = checkout
+	co = commit
+	st = status
+	br = branch
+	rs = restore
+	hist = log --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset | %C(auto)%s%d%Creset %C(bold blue)[%an]%Creset' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	pyll = pull
+[commit]
+	verbose = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff]
+	tool = opendiff
+[merge]
+	tool = opendiff
+[pull]
+	rebase = true
+[merge "merge-structure-sql"]
+	name = Rails structure.sql merge driver
+	driver = git-merge-structure-sql %A %O %B
+[core]
+	attributesfile = ~/.gitattributes
