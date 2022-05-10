@@ -21,6 +21,6 @@ status --is-interactive; and rbenv init - fish | source
 
 fish_add_path /opt/homebrew/sbin
 
-# source /opt/homebrew/opt/asdf/libexec/asdf.fish
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 # eval (nodenv init -)
 status --is-interactive; and source (nodenv init -|psub)
