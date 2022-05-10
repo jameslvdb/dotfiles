@@ -69,6 +69,11 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (setq doom-themes-treemacs-theme "doom-colors")
+(use-package! tree-sitter
+  :config
+  (require 'tree-sitter-langs)
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
 (map! :leader
       :desc "Jump to char" "j" #'avy-goto-char-timer)
@@ -106,17 +111,18 @@
                ("\\section{%s}" . "\\section*{%s}"))))
 
 ;; Set tags to be flush with right edge
-(setq org-tags-column -90)
+(after! org
+  (setq org-tags-column -90))
 
-(defun jlv/align-org-tags-on-save ()
-  "Align org tags on save."
-  (interactive
-   (when (eq major-mode 'org-mode)
-     (message (format "Formatting %s" buffer-file-name))
-     (org-align-tags)))
-   )
+;; (defun jlv/align-org-tags-on-save ()
+;;   "Align org tags on save."
+;;   (interactive
+;;    (when (eq major-mode 'org-mode)
+;;      (message (format "Formatting %s" buffer-file-name))
+;;      (org-align-tags)))
+;;    )
 
-(add-hook 'after-save-hook #'jlv/align-org-tags-on-save)
+;; (add-hook 'after-save-hook #'jlv/align-org-tags-on-save)
 
 ;; Capture templates
 ;; Use after! org since doom loads its own templates
