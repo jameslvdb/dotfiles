@@ -150,6 +150,10 @@
            (file+olp+datetree "~/org/meetings.org")
            "* %?\n[%(glv/meeting-time (glv/current-time-rounding-minutes))]\n\n\n\n** Attendees\n"
            :tree-type week :empty-lines 1)
+          ("o" "One on One" entry
+           (file+olp+datetree "~/org/one-on-ones.org")
+           "* %?\n\n"
+           :empty-lines 1)
           ("q" "Question to ask" entry
            (file+olp "~/org/pga.org" "Questions")
            "** TODO %? %^g")
