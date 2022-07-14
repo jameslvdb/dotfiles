@@ -29,3 +29,5 @@
 	driver = git-merge-structure-sql %A %O %B
 [core]
 	attributesfile = ~/.gitattributes
+[init]
+	defaultBranch = main
