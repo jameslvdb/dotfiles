@@ -198,6 +198,30 @@
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
 
+;; Org Faces
+
+(custom-set-faces!
+  '(org-document-title :height 1.4)
+  '(org-heading-1 :height 1.3)
+  '(org-heading-2 :height 1.2))
+
+;; === Markdown ===
+
+;; Faces
+(custom-set-faces!
+  '(markdown-header-face-1 :inherit org-document-title :height 1.4)
+  '(markdown-header-face-2 :inherit outline-1 :height 1.3)
+  '(markdown-header-face-3 :inherit outline-2 :height 1.2)
+  '(markdown-header-face-4 :inherit outline-3 :height 1.2)
+  '(markdown-header-face-5 :inherit outline-4)
+  '(markdown-header-face-6 :inherit outline-5)
+  `(markdown-list-face :foreground ,(doom-color 'blue))
+  `(markdown-header-delimiter-face :foreground ,(doom-color 'fg)))
+
+;; Text wrapping
+(add-hook 'markdown-mode-hook '(lambda () (setq fill-column 80)))
+(add-hook 'markdown-mode-hook 'turn-on-auto-fill)
+
 ;; === Ruby ===
 
 (defun format-ruby-on-save ()
