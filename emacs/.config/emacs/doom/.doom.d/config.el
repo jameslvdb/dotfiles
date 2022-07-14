@@ -232,15 +232,15 @@
 
 (add-hook 'after-save-hook #'format-ruby-on-save)
 
-(defun insert-let-var ()
-  "Inserts 'let(:model-name) { create :model-name }' at point"
-  (interactive)
-  (let ((model-name (read-string "factory name: ")))
-    (insert "let(:" model-name ") { create :" model-name " }"))
-  )
+;; (defun insert-let-var ()
+;;   "Inserts 'let(:model-name) { create :model-name }' at point"
+;;   (interactive)
+;;   (let ((model-name (read-string "factory name: ")))
+;;     (insert "let(:" model-name ") { create :" model-name " }"))
+;;   )
 
-(map! :leader
-      :desc "Insert basic factory" "m t f" #'insert-let-var)
+;; (map! :leader
+;;       :desc "Insert basic factory" "m t f" #'insert-let-var)
 
 ;; === Magit ===
 
