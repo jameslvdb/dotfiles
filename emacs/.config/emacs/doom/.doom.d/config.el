@@ -66,21 +66,28 @@
 ;; Use JetBrains Mono.
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14 :weight 'regular))
 
+;; Make s-+ and s-- change font size by 1 instead of 2 (default).
 (setq doom-font-increment 1)
 
 ;; Always start Emacs maximized.
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (setq doom-themes-treemacs-theme "doom-colors")
+
+;; Use tree-sitter for syntax highlighting.
 (use-package! tree-sitter
   :config
   (require 'tree-sitter-langs)
   (global-tree-sitter-mode)
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
+;; Set up avy char jumping with SPC j
 (map! :leader
       :desc "Jump to char" "j" #'avy-goto-char-timer)
 (setq avy-timeout-seconds 0.3)
+
+;; Use M-g to goto definitions
+(map! "M-g" #'evil-goto-definition)
 
 ;; Disable rubocop flychecker globally.
 (setq flycheck-disabled-checkers '(ruby-rubocop))
@@ -264,6 +271,7 @@
 
 ;; === Magit ===
 
+;; Set a keybind for git-commit-co-authored
 (map! :after git-commit
       :map git-commit-mode-map
       :localleader
