@@ -106,6 +106,20 @@
 (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
+;; Flip ` and ~ for easier code fence typing (Markdown-style)
+(map! :map org-mode-map
+      :i "`" #'jlv/insert-tilde
+      :i "~" #'jlv/insert-backtick)
+
+(defun jlv/insert-tilde ()
+  "Insert a tilde at the current point"
+  (interactive)
+  (insert "~"))
+(defun jlv/insert-backtick ()
+  "Insert a backtick at the current point"
+  (interactive)
+  (insert "`"))
+
 ;; Add LaTeX class for ACM article exporting
 (with-eval-after-load 'ox-latex
   (add-to-list 'org-latex-classes
