@@ -174,6 +174,9 @@
           ("q" "Question to ask" entry
            (file+olp "~/org/pga.org" "Questions")
            "** TODO %? %^g")
+          ("t" "A TODO entry" entry
+           (file "~/org/todo.org")
+           "* TODO %?")
           )))
 
 ;; I could do the timestamp thing with org-timestamp-from-time and lose
