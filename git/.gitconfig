@@ -31,3 +31,5 @@
 	attributesfile = ~/.gitattributes
 [init]
 	defaultBranch = main
+[github]
+	user = jameslvdb
