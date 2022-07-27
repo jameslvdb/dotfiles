@@ -10,7 +10,7 @@
 (global-display-line-numbers-mode 1)
 
 ;; Load the Modus Vivendi dark theme
-(load-theme 'modus-vivendi t)
+(load-theme 'wombat)
 
 (set-face-attribute 'default nil :font "JetBrainsMono Nerd Font" :height 140)
 
