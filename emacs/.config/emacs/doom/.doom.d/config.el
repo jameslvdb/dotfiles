@@ -183,7 +183,8 @@
            "** TODO %? %^g")
           ("t" "A TODO entry" entry
            (file "~/org/todo.org")
-           "* TODO %?")
+           "* TODO %?"
+           :empty-lines 1)
           )))
 
 ;; I could do the timestamp thing with org-timestamp-from-time and lose
