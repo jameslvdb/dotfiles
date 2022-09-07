@@ -88,6 +88,7 @@
 
 ;; Use M-g to goto definitions
 (map! "M-g" #'evil-goto-definition)
+(map! "s-<mouse-1>" #'evil-goto-definition)
 
 ;; Disable rubocop flychecker globally.
 (setq flycheck-disabled-checkers '(ruby-rubocop))
