@@ -325,15 +325,39 @@
 
 (add-hook 'after-save-hook #'format-ruby-on-save)
 
-;; (defun insert-let-var ()
-;;   "Inserts 'let(:model-name) { create :model-name }' at point"
-;;   (interactive)
-;;   (let ((model-name (read-string "factory name: ")))
-;;     (insert "let(:" model-name ") { create :" model-name " }"))
-;;   )
+(defun insert-let-var ()
+  "Inserts 'let(:model-name) { create :model-name }' at point"
+  (interactive)
+  (let ((model-name (read-string "factory name: ")))
+    (insert "let(:" model-name ") { create :" model-name " }"))
+  )
 
 ;; (map! :leader
 ;;       :desc "Insert basic factory" "m t f" #'insert-let-var)
+
+
+;; === Elixir ===
+
+;; Open .html.eex files with web-mode instead of mhtml-mode
+(add-to-list 'auto-mode-alist '("\\.html\\.eex\\'" . web-mode))
+(setq web-mode-engines-alist
+      '(("elixir" . "\\.html\\.eex\\'")))
+
+;; === Web ===
+
+;; Set default indentation levels to 2 spaces
+(setq web-mode-markup-indent-offset 2)
+
+(defun jlv/format-react-files ()
+  "Format js files on save/"
+  (when (eq major-mode 'rjsx-mode)
+    (message (format "Formatting %s" buffer-file-name))
+    (shell-command (format "yarn run prettier-standard %s" buffer-file-name))))
+
+(add-hook 'after-save-hook #'jlv/format-react-files)
+
+;; === CSS ===
+(add-hook 'rjsx-mode #'rainbow-mode)
 
 ;; === Magit ===
 
