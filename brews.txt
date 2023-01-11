@@ -1,0 +1,15 @@
+asdf
+bat
+fd
+fish
+fzf
+gh
+hub
+neovim
+pandoc
+rbenv
+ripgrep
+starship
+stow
+tree-sitter
+wget
