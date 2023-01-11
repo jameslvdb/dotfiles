@@ -30,7 +30,7 @@
 	driver = git-merge-structure-sql %A %O %B
 [core]
 	attributesfile = ~/.gitattributes
-	excludesfile = /Users/jamesvanderburg/.gitignore
+	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
 [github]
