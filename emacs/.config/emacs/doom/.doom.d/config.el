@@ -153,7 +153,7 @@
 ;; Use after! org since doom loads its own templates
 (after! org
   (setq org-capture-templates
-        '(
+        `(
           ("a" "A scheduled task" entry
            (file "~/org/todo.org")
            "* TODO %?\nSCHEDULED: %t")
@@ -171,6 +171,9 @@
           ("e" "An Emacs tweak" entry
            (file "~/org/emacs.org")
            "* TODO %?")
+          ("i" "Idea inbox" entry
+           (file "~/org/inbox.org")
+           "* %?")
           ("m" "Meeting notes" entry
            (file+olp+datetree "~/org/meetings.org")
            "* %?\n[%(glv/meeting-time (glv/current-time-rounding-minutes))]\n\n\n\n** Attendees\n"
@@ -179,10 +182,28 @@
            (file+olp+datetree "~/org/one-on-ones.org")
            "* %?\n\n"
            :empty-lines 1)
-          ("q" "Question to ask" entry
-           (file+olp "~/org/pga.org" "Questions")
-           "** TODO %? %^g")
-          ("t" "A TODO entry" entry
+          ("t" "A TODO entry")
+          ("tb" "Backend" entry
+           (file "~/org/todo-backend.org")
+           "* TODO %?"
+           :empty-lines 1)
+          ("tf" "Frontend" entry
+           (file "~/org/todo-frontend.org")
+           "* TODO %?"
+           :empty-lines 1)
+          ("th" "PGA Hope" entry
+           (file "~/org/todo-pga-hope.org")
+           "* TODO %?"
+           :empty-lines 1)
+          ("tm" "Mobile app" entry
+           (file "~/org/todo-mobile-app.org")
+           "* TODO %?"
+           :empty-lines 1)
+          ("tp" "Personal" entry
+           (file "~/org/todo-personal.org")
+           "* TODO %?"
+           :empty-lines 1)
+          ("tt" "General" entry
            (file "~/org/todo.org")
            "* TODO %?"
            :empty-lines 1)
