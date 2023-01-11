@@ -15,11 +15,10 @@ alias fishconfig="vim ~/.config/fish/config.fish"
 
 # Rails-specific aliases
 alias be="bundle exec"
-alias rails="bin/rails"
-alias rake="bin/rake"
 
 # Work aliases
-alias coworking-meet="open https://meet.google.com/twz-aoep-thx"
+alias coworking-meet="pbcopy https://meet.google.com/twz-aoep-thx"
+alias looker="open https://pgahq.cloud.looker.com/sql"
 
 starship init fish | source
 status --is-interactive; and rbenv init - fish | source
