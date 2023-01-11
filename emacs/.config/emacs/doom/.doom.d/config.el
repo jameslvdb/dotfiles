@@ -232,6 +232,49 @@
                                          (make-decoded-time :minute delta))))
     (encode-time rounded-time)))
 
+;; Add pgahq/coach-tools-backend issue link type
+(defun make-coach-tools-backend-link (issue-number)
+  (browse-url (concat "https://github.com/pgahq/coach-tools-backend/issues/" issue-number)))
+
+;; Add D&D Beyond Spell link type
+(defun make-dnd-beyond-spell-link (spell-name)
+  (browse-url (concat "https://www.dndbeyond.com/spells/" spell-name)))
+
+;; Add D&D Beyond Monster link type
+(defun make-dnd-beyond-monster-link (monster-name)
+  (browse-url (concat "https://www.dndbeyond.com/monsters/" monster-name)))
+
+;; Add D&D Beyond Magic Item link type
+(defun make-dnd-beyond-magic-item-link (magic-item-name)
+  (browse-url (concat "https://www.dndbeyond.com/magic-items/" magic-item-name)))
+
+;; Add D&D Beyond Equipment link type
+(defun make-dnd-beyond-equipment-link (equipment-name)
+  (browse-url (concat "https://www.dndbeyond.com/equipment/" equipment-name)))
+
+(require 'ol)
+
+(after! org
+  (org-add-link-type "dnd-spell" #'make-dnd-beyond-spell-link)
+  (org-add-link-type "dnd-monster" #'make-dnd-beyond-monster-link)
+  (org-add-link-type "dnd-magic-item" #'make-dnd-beyond-magic-item-link)
+  (org-add-link-type "dnd-equipment" #'make-dnd-beyond-equipment-link)
+  (org-add-link-type "pga-backend" #'make-coach-tools-backend-link)
+  )
+
+(defun insert-spell-link ()
+  "Insert a link to the given spell on D&D Beyond."
+  (interactive)
+  (let ((spell-name (read-string "spell name: ")))
+    (let ((link-string (s-replace " " "-" (downcase spell-name))))
+      (insert "[[dnd-spell:" link-string "][" spell-name "]]"))))
+
+
+(defun test-interactive-completing-read ()
+  "Insert a string from a predetermined list"
+  (interactive)
+  (insert (completing-read "string to insert: " (list "foo" "bar" "baz"))))
+
 ;; === Org-roam
 
 (setq org-roam-directory (file-truename "~/org-roam"))
