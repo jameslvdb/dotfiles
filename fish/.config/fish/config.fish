@@ -2,7 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-alias l="ls -lah"
+alias ls="exa"
+alias l="exa -lah --git"
+alias cat="bat"
 
 # cd-to-repo aliases
 alias backend="cd ~/src/pgahq/coach-tools-backend"
@@ -16,9 +18,16 @@ alias fishconfig="vim ~/.config/fish/config.fish"
 # Rails-specific aliases
 alias be="bundle exec"
 
+# GQL aliases
+alias dump_gql_schema="rake graphql:schema:idl"
+
 # Work aliases
 alias coworking-meet="pbcopy https://meet.google.com/twz-aoep-thx"
 alias looker="open https://pgahq.cloud.looker.com/sql"
+
+# Python aliases
+alias python="python3"
+alias pip="pip3"
 
 starship init fish | source
 status --is-interactive; and rbenv init - fish | source
