@@ -88,3 +88,27 @@
 (map! :leader
       :desc "Jump to char" "j" #'avy-goto-char-timer)
 (setq avy-timeout-seconds 0.3)
+
+;; Disable rubocop flychecker globally.
+(setq flycheck-disabled-checkers '(ruby-rubocop))
+
+;; Org-mode
+;;
+;; Flip ` and ~ for easier code fence typing (Markdown-style)
+(map! :map org-mode-map
+      :i "`" #'jlv/insert-tilde
+      :i "~" #'jlv/insert-backtick)
+
+(defun jlv/insert-tilde ()
+  "Insert a tilde at the current point"
+  (interactive)
+  (insert "~"))
+(defun jlv/insert-backtick ()
+  "Insert a backtick at the current point"
+  (interactive)
+  (insert "`"))
+
+(map! :after git-commit
+      :map git-commit-mode-map
+      :localleader
+      "c" #'git-commit-co-authored)
