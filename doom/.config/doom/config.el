@@ -80,3 +80,6 @@
 
 ;; Make s-+ and s-- change font size by 1 instead of 2 (default).
 (setq doom-font-increment 1)
+
+;; Always start Emacs maximized.
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
