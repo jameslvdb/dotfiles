@@ -83,3 +83,8 @@
 
 ;; Always start Emacs maximized.
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; Set up avy char jumping with SPC j
+(map! :leader
+      :desc "Jump to char" "j" #'avy-goto-char-timer)
+(setq avy-timeout-seconds 0.3)
