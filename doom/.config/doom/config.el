@@ -77,3 +77,6 @@
 
 ;; Use JetBrains Mono.
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14 :weight 'regular))
+
+;; Make s-+ and s-- change font size by 1 instead of 2 (default).
+(setq doom-font-increment 1)
