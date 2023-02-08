@@ -74,3 +74,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Use JetBrains Mono.
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14 :weight 'regular))
