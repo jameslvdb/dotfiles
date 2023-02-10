@@ -9,6 +9,9 @@
 ;;
 ;;; Code:
 
+;; UI configs (TODO move to own file if needed)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Font faces
 (load! "lisp/fonts.el")
 ;; Capture Templates for org-mode
