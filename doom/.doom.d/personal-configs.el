@@ -11,6 +11,7 @@
 
 ;; UI configs (TODO move to own file if needed)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(setq scroll-margin 8)
 
 ;; Font faces
 (load! "lisp/fonts.el")
