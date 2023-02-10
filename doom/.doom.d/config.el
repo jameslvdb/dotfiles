@@ -84,3 +84,5 @@
 (org-roam-db-autosync-mode)
 
 (load! "fonts.el")
+(load! "remaps.el")
+(load! "capture-templates.el")
