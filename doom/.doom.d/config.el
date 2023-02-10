@@ -83,3 +83,4 @@
 (load! "remaps.el")
 (load! "capture-templates.el")
 (load! "ruby.el")
+(load! "magit.el")
