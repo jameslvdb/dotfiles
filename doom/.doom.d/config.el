@@ -82,3 +82,5 @@
 ;; Org-roam
 (setq org-roam-directory (file-truename "~/org-roam"))
 (org-roam-db-autosync-mode)
+
+(load! "fonts.el")
