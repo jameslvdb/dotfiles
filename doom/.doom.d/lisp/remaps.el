@@ -30,5 +30,4 @@
   (interactive)
   (insert "`"))
 
-(provide 'remaps)
 ;;; remaps.el ends here

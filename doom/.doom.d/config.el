@@ -79,8 +79,4 @@
 (setq org-roam-directory (file-truename "~/org-roam"))
 (org-roam-db-autosync-mode)
 
-(load! "fonts.el")
-(load! "remaps.el")
-(load! "capture-templates.el")
-(load! "ruby.el")
-(load! "magit.el")
+(load! "personal-configs.el")
