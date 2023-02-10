@@ -9,10 +9,10 @@
 ;;
 ;;; Code:
 
+(require 'magit)
+
 (map! :after git-commit
       :map git-commit-mode-map
       :localleader
       "c" #'git-commit-co-authored)
-
-(provide 'magit)
 ;;; magit.el ends here
