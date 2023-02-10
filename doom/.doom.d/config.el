@@ -75,10 +75,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Set left alt key to be recognized as meta
-(cond (IS-MAC
-      (setq mac-right-option-modifier 'meta)))
-
 ;; Org-roam
 (setq org-roam-directory (file-truename "~/org-roam"))
 (org-roam-db-autosync-mode)

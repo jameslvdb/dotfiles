@@ -12,6 +12,10 @@
 ;;
 ;;; Code:
 
+;; Set left alt key to be recognized as meta
+(cond (IS-MAC
+      (setq mac-right-option-modifier 'meta)))
+
 ;; Flip ` and ~ for easier code fence typing (Markdown-style)
 (map! :map org-mode-map
       :i "`" #'jlv/insert-tilde
