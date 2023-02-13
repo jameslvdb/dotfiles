@@ -9,10 +9,8 @@
 ;;
 ;;; Code:
 
-;; UI configs (TODO move to own file if needed)
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
-(setq scroll-margin 8)
-
+;; UI configs
+(load! "lisp/user-interface.el")
 ;; Font faces
 (load! "lisp/fonts.el")
 ;; Capture Templates for org-mode
