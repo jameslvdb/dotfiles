@@ -3,10 +3,6 @@
 ;; Copyright (C) 2023 James Vanderburg
 ;;
 ;; Author: James Vanderburg <james@vanderburg.org>
-;; Maintainer: James Vanderburg <james@vanderburg.org>
-;; Created: February 10, 2023
-;; Modified: February 10, 2023
-;;; Code:
 
 ;; Capture templates
 ;; Use after! org since doom loads its own templates
@@ -90,6 +86,3 @@
          (rounded-time (decoded-time-add decoded-time
                                          (make-decoded-time :minute delta))))
     (encode-time rounded-time)))
-
-(provide 'capture-templates)
-;;; capture-templates.el ends here

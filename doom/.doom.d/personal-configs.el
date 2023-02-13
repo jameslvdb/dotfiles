@@ -3,11 +3,6 @@
 ;; Copyright (C) 2023 James Vanderburg
 ;;
 ;; Author: James Vanderburg <james@vanderburg.org>
-;; Maintainer: James Vanderburg <james@vanderburg.org>
-;; Created: February 10, 2023
-;; Modified: February 10, 2023
-;;
-;;; Code:
 
 ;; UI configs
 (load! "lisp/user-interface.el")
@@ -23,5 +18,3 @@
 (load! "lisp/ruby.el")
 ;; Magit configs
 (load! "lisp/magit.el")
-
-;;; personal-configs.el ends here
