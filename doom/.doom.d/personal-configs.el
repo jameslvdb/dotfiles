@@ -13,6 +13,8 @@
 (load! "lisp/user-interface.el")
 ;; Font faces
 (load! "lisp/fonts.el")
+;; Org-mode settings
+(load! "lisp/org-mode.el")
 ;; Capture Templates for org-mode
 (load! "lisp/capture-templates.el")
 ;; General keybinding remaps
