@@ -42,6 +42,10 @@
            (file "~/org/todo-backend.org")
            "* TODO %?"
            :empty-lines 1)
+          ("tc" "Frisco Coaching Center" entry
+           (file "~/org/todo-frisco-coaching-center.org")
+           "* TODO %?"
+           :empty-lines 1)
           ("tf" "Frontend" entry
            (file "~/org/todo-frontend.org")
            "* TODO %?"
