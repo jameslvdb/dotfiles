@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export SSH_AUTH_SOCK:/Users/jamesvanderburg/Library/Group\x20Containers/2BUA8C4S2C\x2ecom\x2e1password/t/agent\x2esock
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
@@ -29,4 +30,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR --export fish_user_paths:/opt/homebrew/sbin\x1e/Users/jamesvanderburg/\x2eemacs\x2ed/bin\x1e/Users/jamesvanderburg/\x2erbenv/bin\x1e/opt/homebrew/bin
+SETUVAR --export fish_user_paths:/Users/jamesvanderburg/src/flutter/bin\x1e/Users/jamesvanderburg/\x2ecargo/bin\x1e/Users/jamesvanderburg/\x2easdf/shims\x1e/opt/homebrew/opt/asdf/libexec/bin\x1e/opt/homebrew/opt/openjdk\x4017/bin\x1e/opt/homebrew/sbin\x1e/Users/jamesvanderburg/\x2eemacs\x2ed/bin\x1e/Users/jamesvanderburg/\x2erbenv/bin\x1e/opt/homebrew/bin\x1e/Users/jamesvanderburg/\x2eelixir\x2dls/release\x1e/Users/jamesvanderburg/\x2econfig/emacs/doom/\x2eemacs\x2ed/bin/\x1e/Users/jamesvanderburg/src/flutter/bin/\x1e/Users/jamesvanderburg/\x2eyarn/bin
