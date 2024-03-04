@@ -4,5 +4,7 @@
 
 ;; Author: James Vanderburg <james@vanderburg.org>
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
-(setq scroll-margin 8)
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+(setq scroll-margin 4)
+(setq display-line-numbers-type 'relative)

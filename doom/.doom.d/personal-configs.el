@@ -14,7 +14,13 @@
 (load! "lisp/capture-templates.el")
 ;; General keybinding remaps
 (load! "lisp/remaps.el")
+;; Copilot
+;; (load! "lisp/copilot.el")
 ;; Ruby configs
 (load! "lisp/ruby.el")
 ;; Magit configs
 (load! "lisp/magit.el")
+;; Flutter/Dart configs
+(load! "lisp/flutter.el")
+;; JavaScript/React configs
+(load! "lisp/javascript.el")
