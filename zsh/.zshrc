@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:/Users/jamesvanderburg/src/flutter/bin"
 export PATH="$PATH:/Users/jamesvanderburg/.emacs.d/bin"
+export PATH="/Users/jamesvanderburg/.local/bin:$PATH"
 export AWS_DEFAULT_REGION=us-east-1
 
 # Set name of the theme to load --- if set to "random", it will
@@ -110,9 +111,9 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/.zshrc"
 
 # Command aliases
-## Replace ls with exa
-alias ls="exa"
-alias l="exa -lah"
+## Replace ls with eza
+alias ls="eza"
+alias l="eza -lah"
 ## Replace cat with bat
 alias cat="bat"
 
@@ -133,3 +134,10 @@ alias pip="pip3"
 eval "$(starship init zsh)"
 
 eval "$(rbenv init - zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/jamesvanderburg/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
