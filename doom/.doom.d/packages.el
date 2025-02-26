@@ -12,8 +12,8 @@
 (package! evil-matchit)
 (package! csv-mode)
 (package! graphql-mode)
-;;(package! copilot
-;;  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+(package! copilot
+ :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
 
 (package! org-journal)
 
