@@ -14,25 +14,19 @@
 
 (after! org
   (org-link-set-parameters "pga-backend"
-                           :follow #'(jlv/pgahq-follow "backend")
+                           :follow #'jlv/follow-coach-tools-backend
                            :export #'(jlv/pgahq-export "backend"))
   (org-link-set-parameters "coaching-programs-frontend"
-                           :follow #'(jlv/pgahq-follow "frontend")
+                           :follow #'jlv/follow-coaching-programs-frontend
                            :export #'(jlv/pgahq-export "frontend"))
   (org-link-set-parameters "pga-site-redesign"
                            :follow
                            #'make-pga-site-redesign-link))
 
-(defun jlv/pgahq-follow (repo)
-  (pcase repo
-    (`backend #'jlv/follow-coach-tools-backend)
-    (`frontend #'jlv/follow-coaching-programs-frontend)))
-
 (defun jlv/pgahq-export (repo)
   (pcase repo
     (`backend #'jlv/coach-tools-backend-export)
     (`frontend #'jlv/coaching-programs-frontend-export)))
-
 
 (defun jlv/follow-coach-tools-backend (issue-number)
   (browse-url (jlv/coach-tools-backend-issue-link issue-number)))
@@ -80,12 +74,6 @@
   "Align all org tags."
   (interactive)
   (org-align-tags t))
-
-;; org-todo-keywords
-(after! org
-  (setq org-todo-keywords
-        (add-to-list 'org-todo-keywords
-                     '(sequence "QUES(q)" "|" "ASWR(a)"))))
 
 ;; org-contacts
 (after! org
