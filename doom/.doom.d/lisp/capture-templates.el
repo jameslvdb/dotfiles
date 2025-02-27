@@ -21,7 +21,7 @@
            "*** /%?")
           ("d" "Daily notes" entry
            (file+olp+datetree "~/org/logs.org")
-           "* %?\n\n"
+           "* %?\n"
            :tree-type week :empty-lines 1)
           ("e" "An Emacs tweak" entry
            (file "~/org/emacs.org")
@@ -31,7 +31,7 @@
            "* %?")
           ("m" "Meeting notes" entry
            (file+olp+datetree "~/org/meetings.org")
-           "* %?\n[%(glv/meeting-time (glv/current-time-rounding-minutes))]\n\n\n\n** Attendees\n"
+           "* %?\n[%(glv/meeting-time (glv/current-time-rounding-minutes))]\n\n\n\n** Action Items\n"
            :tree-type week :empty-lines 1)
           ("o" "One on One" entry
            (file+olp+datetree "~/org/one-on-ones.org")
