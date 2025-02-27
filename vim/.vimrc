@@ -1,3 +1,6 @@
+" Turn on syntax highlighting
 syntax on
+
+" Add line numbers
 set number
-set tabstop=4
+
